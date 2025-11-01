@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.swc/
+
+# Production
+frontend/dist/
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Hardhat
+backend/coverage/
+backend/coverage.json
+backend/typechain-types/
+backend/hardhat.config.ts.bak
+
+# Deployments
+backend/deployments/localhost/
+backend/.env
+
+# FHEVM
+backend/fhevmTemp/
+
+# Demo files
+demo.mp4
+
