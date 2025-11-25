@@ -18,7 +18,7 @@ function getContractByChainId(chainId: number | undefined) {
 
   const entry = EncryptedLearningTrackerAddresses[chainId.toString() as keyof typeof EncryptedLearningTrackerAddresses];
 
-  if (!("address" in entry) || entry.address === ethers.ZeroAddress) {
+  if (!entry || typeof entry !== "object" || !("address" in entry) || (entry as any).address === ethers.ZeroAddress) {
     return { abi: EncryptedLearningTrackerABI.abi, chainId };
   }
 
