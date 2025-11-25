@@ -27,6 +27,19 @@ const nextConfig: NextConfig = {
             },
           ],
         },
+        {
+          source: '/:path*.wasm',
+          headers: [
+            {
+              key: 'Content-Type',
+              value: 'application/wasm',
+            },
+            {
+              key: 'Cross-Origin-Embedder-Policy',
+              value: 'require-corp',
+            },
+          ],
+        },
       ]);
     }
   }),

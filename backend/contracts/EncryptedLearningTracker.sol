@@ -2,14 +2,14 @@
 pragma solidity ^0.8.24;
 
 import {FHE, euint32, externalEuint32} from "@fhevm/solidity/lib/FHE.sol";
-import {SepoliaConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
+import {ZamaEthereumConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 /// @title Encrypted Learning Tracker
 /// @notice A FHEVM-based DApp for encrypted learning achievement tracking
 /// @dev All student data (scores, study time, focus levels) are encrypted on-chain
-contract EncryptedLearningTracker is SepoliaConfig, ERC721 {
+contract EncryptedLearningTracker is ZamaEthereumConfig, ERC721 {
     // ============ Structs ============
     
     struct Course {

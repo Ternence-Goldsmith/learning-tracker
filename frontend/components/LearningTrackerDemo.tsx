@@ -263,7 +263,8 @@ export const LearningTrackerDemo = () => {
               } else if (typeof firstValue === "bigint") {
                 passedBool = firstValue === 1n;
               } else if (typeof firstValue === "string") {
-                passedBool = firstValue.toLowerCase() === "true";
+                const fv = firstValue as string;
+                passedBool = fv === "1" || fv.toLowerCase() === "true";
               }
             }
           }
